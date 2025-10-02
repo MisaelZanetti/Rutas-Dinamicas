@@ -1,0 +1,146 @@
+body {
+  padding: 20px;
+  font-family: system-ui, Arial, sans-serif;
+  background: #0f172a; /* azul oscuro */
+  color: #e5e7eb; /* gris claro */
+  min-height: 100vh;
+}
+
+/* ==== CATÁLOGO ==== */
+.catalogo {
+  padding: 20px;
+  font-family: system-ui, Arial, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  min-height: 100vh;
+}
+
+.catalogo > h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.catalogo .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.catalogo .card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.catalogo .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+}
+
+.catalogo .titulo {
+  font-size: 20px;
+  margin: 0 0 8px 0;
+  color: #fff;
+}
+
+.catalogo .director {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0 0 12px 0;
+}
+
+.catalogo .descripcion {
+  font-size: 15px;
+  color: #d1d5db;
+  margin-bottom: 16px;
+}
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #ef4444;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #dc2626;
+}
+
+/* ==== DETALLE DE PELÍCULA ==== */
+.detalle-pelicula {
+  font-family: system-ui, Arial, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  min-height: 100vh;
+}
+
+.detalle-pelicula header {
+  padding: 16px 24px;
+  background: #1e293b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detalle-pelicula header a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.detalle-pelicula main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #1e293b;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.5);
+}
+
+.detalle-pelicula .poster {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.detalle-pelicula h1 {
+  margin-top: 0;
+  font-size: 28px;
+  color: #fff;
+}
+
+.detalle-pelicula .meta {
+  font-size: 15px;
+  color: #9ca3af;
+  margin-bottom: 16px;
+}
+
+.detalle-pelicula .descripcion {
+  font-size: 16px;
+  color: #d1d5db;
+  margin-bottom: 20px;
+}
+
+.detalle-pelicula .btn-volver {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #ef4444;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.detalle-pelicula .btn-volver:hover {
+  background: #dc2626;
+}
