@@ -3,11 +3,12 @@ import { Link, useOutletContext, useParams } from 'react-router-dom';
 
 export default function PelisCategorias() {
     const { id } = useParams();
-    const peliculas = useOutletContext()
+    const [peliculas, setPeliculas] = useOutletContext();
     peliculas.filter(peli => peli.id === parseInt(id))
-    console.log(peliculas[id].id);
-    console.log(peliculas[1].id);
-    
+
+    const añadirFavorito = (id) => {
+        peliculas[id - 1].favorito = true
+    }
 
     return (
         <div className='detalle-pelicula'>
@@ -18,7 +19,10 @@ export default function PelisCategorias() {
                 {peliculas[id - 1].descripcion}
             </p>
 
-            <Link to={'/peliculas/all'}><button className="btn">Volver al catálogo</button></Link>
+            <div>
+                <Link to={'/peliculas/all'}><button className="btn">Volver al catálogo</button></Link>
+                <button className="btnFav" onClick={ () => añadirFavorito(id)}>Añadir Favorito</button>
+            </div>
         </div>
     )
 }
